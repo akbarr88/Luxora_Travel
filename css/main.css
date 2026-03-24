@@ -1,4 +1,4 @@
-/* =================================================================== 
+home-social/* =================================================================== 
  *
  *  Glint v1.0 Main Stylesheet
  *  11-20-2017
@@ -2684,7 +2684,7 @@ html.no-csstransitions .home-content__main {
  * ------------------------------------------------------------------- */
 .s-clients {
     padding-top: 8.2rem;
-    padding-bottom: 16.8rem;
+    padding-bottom: 0.8rem;
     background-color: #e6e6e6;
     color: #757575;
     position: relative;
@@ -3662,6 +3662,7 @@ footer .row {
     gap: 25px;
 }
 
+
 /* Image lebih besar */
 .gallery-item img {
     max-width: 100%;
@@ -3691,6 +3692,78 @@ footer .row {
     }
 }
 
+/* Default: tampil (untuk mobile kecil) */
+.see-more-wrapper {
+    display: block;
+}
+
+/* Tablet & Desktop (≥ 600px) → sembunyikan */
+@media screen and (min-width: 600px) {
+    .see-more-wrapper {
+        display: none !important;
+    }
+}
+
+/* Mobile only */
+@media screen and (max-width: 768px) {
+
+
+    .see-more-wrapper {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    #seeMoreBtn {
+        background: #000;
+        color: #fff;
+        padding: 10px 25px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+    #seeMoreBtn:hover {
+        background: #333;
+    }
+
+    /* wrapper untuk animasi */
+.clients-gallery {
+    overflow: hidden;
+    max-height: 550px; /* tinggi awal (kira2 cukup untuk 4 foto) */
+    transition: max-height 0.6s ease;
+}
+
+/* saat expand */
+.clients-gallery.gallery-expanded {
+    max-height: 2000px; /* cukup besar supaya semua foto masuk */
+}
+
+/* mobile: sembunyikan extra */
+@media screen and (max-width: 768px) {
+    .gallery-item.extra {
+        opacity: 0;
+    }
+
+    .gallery-expanded .gallery-item.extra {
+        opacity: 1;
+        animation: fadeUp 0.5s ease forwards;
+    }
+}
+
+/* animasi */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+}
 
 
 /* LIGHTBOX OVERLAY */
