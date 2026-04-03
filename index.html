@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="preload" href="style.css" as="style" onload="this.rel='stylesheet'">
 
     <!-- script
     ================================================== -->
@@ -867,6 +868,7 @@
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script src="https://cdn.pulse.is/livechat/loader.js" data-live-chat-id="65e84aa8634d21177b01c1aa" async></script>
+    <script src="script.js" defer></script>
 
         <!-- Script Gallery
     ================================================== -->
@@ -980,6 +982,7 @@ galleryItems.forEach((item, index) => {
     });
 });
 
+
     // =========================
     // CLICK MORE GALLERY
     // =========================
@@ -1005,6 +1008,7 @@ btn.addEventListener("click", function() {
         gallery.scrollIntoView({ behavior: "smooth" });
     }
 });
+
     </script>
 
 
