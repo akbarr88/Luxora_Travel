@@ -1036,15 +1036,13 @@ btn.addEventListener("click", function() {
     </script>
 
 <script>
-window.addEventListener("load", function () {
-  setTimeout(function () {
-    var s = document.createElement("script");
-    s.src = "https://cdn.pulse.is/livechat/bundle.js";
-    s.async = true;
-    document.body.appendChild(s);
-  }, 3000);
-});
+window.onload = function() {
+  var s = document.createElement("script");
+  s.src = "https://cdn.pulse.is/livechat/bundle.js";
+  document.body.appendChild(s);
+};
 </script>
+
 
 </body>
 
